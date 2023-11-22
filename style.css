@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lobster&family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} 
+
+button, form, textarea {
+  font: inherit;
+}
+
+:root {
+  --BGCOLOR: rgb(245, 245, 245);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: rgb(176, 173, 173);
+  }
+} */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+h1, button {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bolder;
+}
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 2.7vh, 1.5rem);
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.figure_btn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 80%;
+}
+
+.anchr_btn {
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.anchr_btn:hover, .anchr_btn:focus-visible {
+  color: rgb(106, 231, 235);
+}
+
+.bar_icon {
+  font-size: 1.5rem;
+}
+
+.header_nav {
+  display: none;
+  margin: 0 1.5rem;
+}
+
+.header_ul {
+  list-style-type: none;
+}
+
+.header_ul li {
+  padding: 0.5rem 0.25rem;
+}
+
+.header_anchor {
+  text-decoration: none;
+  color: rgb(106, 231, 235);
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.header_anchor:hover, .header_anchor:focus-visible {
+  color: #000;
+}
+
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background: center url(./img/Desktop-Free-Images-Travel.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.exp_tour {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 2px solid white;
+  padding: 7px;
+}
+
+.exp_tour:hover, .exp_tour:focus-visible {
+  background-color: white;
+  color: rgb(106, 231, 235);
+}
+
+.home_para {
+  width: 75%;
+  text-align: center;
+}
+
+.second {
+  color: rgb(106, 231, 235);
+}
+
+.about {
+  width: 100vw;
+  height: 75vh;
+  text-align: center;
+  background-color: rgb(229, 237, 244);
+}
+
+.service {
+  width: 100vw;
+  height: 75vh;
+  text-align: center;
+}
+
+.tour {
+  width: 100vw;
+  height: 75vh;
+  text-align: center;
+  background-color: rgb(229, 237, 244);
+}
+
+.div_scroll {
+  display: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  background-color: rgb(106, 231, 235);
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  border-radius: 8px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.footer {
+  height: 200px;
+  color: #fff;
+  background-color: rgb(5, 40, 80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot_para {
+  width: 70%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.header_block {
+  position: fixed;
+  top: 0;
+}
+
+.block {
+  display: block;
+}
+
+
+@media screen and (min-width: 800px) {
+  .anchr_btn {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    color: #fff;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: transparent;
+    position: absolute;
+    box-shadow: none;
+    padding: 1rem;
+  }
+
+  .header_nav {
+    display: block;
+    margin: auto 2rem;
+  }
+
+  .header_ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* height: auto; */
+  }
+
+  .header_anchor {
+    padding: 1rem;
+    color: #fff;
+  }
+
+  .header_anchor:hover, .header_anchor:focus-visible {
+    color: #fff;
+    text-shadow: 1px 1px 3px whitesmoke;
+  }
+
+  .header_block {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .header_block .header_anchor {
+    color: #000;
+  }
+}
